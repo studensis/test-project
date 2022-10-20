@@ -1,4 +1,10 @@
 [
+    {"studenti":[
+        {"username":"fb53204", "password":"123"},
+        {"username":"ms12345", "password":"123"},
+        {"username":"vm12345", "password":"123"},
+        {"username":"mf12345", "password":"123"}
+    ]},
 {
     "id": 1,
     "spol": "M",

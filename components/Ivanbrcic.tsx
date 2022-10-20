@@ -24,9 +24,9 @@ const Ivanbrcic = () => {
         </Link>
 
         <div className="flex items-center p-5">
-          <p className="flex text-lg text-black dark:text-dark-accent p-3">
-            Ivan Brcic
-          </p>
+          <Link href='/login' className="flex text-lg text-black dark:text-dark-accent p-3">
+            Login
+          </Link>
           <div
             className="cursor-pointer"
             onClick={() => setDarkmode(!darkMode)}
