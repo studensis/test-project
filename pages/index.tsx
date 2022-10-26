@@ -5,7 +5,7 @@ import { useState } from "react";
 import Article from "../components/Article";
 import { Button } from "../components/Button";
 import Icon from "../components/Icon";
-import Ivanbrcic from "../components/ivanbrcic";
+import Ivanbrcic from "../components/Ivanbrcic";
 import Status from "../components/Status";
 import Subject from "../components/Subject";
 import Table from "../components/Table";

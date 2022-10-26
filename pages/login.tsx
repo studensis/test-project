@@ -1,72 +1,104 @@
-import React, { useState, useEffect } from 'react'
-import data from '../components/data.json' assert { type: 'JSON' };
-import Home from "./index"
-import {useRouter} from 'next/router'
+import React, { useState, useEffect } from "react";
+import data from "../components/data.json" assert { type: "JSON" };
+import Home from "./index";
+import { useRouter } from "next/router";
+import { Button } from "../components/Button";
 
 function Login() {
-
   const [username, setUsername] = useState<string>("");
-  const router = useRouter()
-  const [route, setRoute] = useState()
+  const router = useRouter();
+  const [route, setRoute] = useState();
   const [error, setError] = useState(false);
 
-  useEffect(() => {
-    
-  }, []);
+  useEffect(() => {}, []);
 
-  const handleSubmit = async (e:any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
-    const studenti:any = data[0].studenti;
-    const studentiFiltered:any = studenti.filter((s:any) => e.target[0].value === s.username);
-    const student:object = studentiFiltered[0];
-    if(studentiFiltered.length < 1 || student.password !== e.target[1].value) {
+    const studenti: any = data[0].studenti;
+    const studentiFiltered: any = studenti.filter(
+      (s: any) => e.target[0].value === s.username
+    );
+    const student: object = studentiFiltered[0];
+    if (studentiFiltered.length < 1 || student.password !== e.target[1].value) {
       setError(true);
       e.target[1].value = "";
     } else {
       router.push("/");
     }
-  }
+  };
 
   return (
-    <div className='flex flex-col h-screen justify-center items-center'>
-      <div className='w-[350px]'>
-        <div className='flex flex-col text-lg font-semibold'>
-          Login
+    <div>
+      <div className="bg-light-neutral-weak h-full w-[53%] absolute right-[47%] ">
+        <div className="flex justify-center items-center h-full">
+          <div>
+            <h1 className="display2 mb-7">Log in</h1>
+            <p className="body1 mb-3 ">Get accesss to xyz</p>
+            <p className="body1 mb-3 ">Eat some pizza</p>
+            <p className="body1 mb-3 ">Listen to music</p>
+            <p className="body1 mb-3 ">Eat some pizza</p>
+            <p className="body1 mb-3 ">Listen to music</p>
+          </div>
         </div>
-        <div className="h-[250px] bg-[#fff5d9] border-2 border-solid border-[#a3a3a3]
-            rounded-lg p-5">
-          <form onSubmit={handleSubmit}>
-            <div className='m-2 flex'>
-              <input className='w-full border border-solid border-[#a3a3a3]
-                rounded p-1 outline-none'
-                type="text"
-                name='username'
-                placeholder='Unesite korisničko ime'
+      </div>
+
+      <div className="bg-white h-full w-[47%] absolute left-[53%] ">
+        <div className="flex items-center h-full">
+          <div className="flex flex-col justify-start items-center">
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col justify-start items-center"
+            >
+              <div className="flex flex-col m-2 relative">
+                <label
+                  htmlFor="email"
+                  className=" absolute caption top-[-0.4rem] left-3 w-10 text-center bg-white "
+                >
+                  Email
+                </label>
+                <input
+                  type="text"
+                  id="email"
+                  className=" border-2 border-light-accent-weak rounded-xl lg:w-[480px] sm:w-[250px] hover:border-light-accent-medium focus:border-light-accent-medium transition-all ease-in outline-none px-3 py-4 "
                 />
               </div>
-            <div className='m-2 flex'>
-              <input className='w-full border border-solid border-[#a3a3a3]
-                rounded p-1 outline-none'
-                type="password"
-                name='password'
-                placeholder='Unesite lozinku'
+              <div className="flex flex-col m-5 relative">
+                <label
+                  htmlFor="email"
+                  className="absolute caption top-[-0.4rem] left-3 w-16 text-center bg-white "
+                >
+                  Password
+                </label>
+                <input
+                  type="password"
+                  id="password"
+                  className="border-2 border-light-accent-weak rounded-xl lg:w-[480px] sm:w-[250px] hover:border-light-accent-medium focus:border-light-accent-medium transition-all ease-in outline-none px-3 py-4 "
                 />
               </div>
-            <div className='flex p-2 w-full h-[65px]'>
-              {error ? <p className='text-red-600'>
-                Korisničko ime i/ili lozinka je pogrešna.
-                Pokušajte ponovo.
-              </p> : ""}
-            </div>
-            <div className='m-2 flex'>
-              <button className="bg-white py-1 px-3 border border-solid border-[#a3a3a3]
-              rounded-lg" type="submit">Submit</button>
-            </div>
-          </form>
+
+              <Button
+                outline={false}
+                style={{ padding: "16px", width: "480px" }}
+                className="mb-12"
+              >
+                <button type="submit">Log in with email</button>
+              </Button>
+            </form>
+            <Button
+              outline={true}
+              style={{ padding: "16px", width: "480px" }}
+              className="mb-4"
+            >
+              Log in with email
+            </Button>
+            <Button outline={true} style={{ padding: "16px", width: "480px" }}>
+              Log in with email
+            </Button>
+          </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Login;
