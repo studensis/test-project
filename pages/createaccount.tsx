@@ -50,15 +50,6 @@ function Login() {
               onSubmit={handleSubmit}
               className="flex flex-col justify-start items-center"
             >
-              {error ? (
-                <p className="w-[480px] flex justify-center border-light-danger title2 border-2 rounded-2xl mb-4 mt-4 p-3 bg-light-danger-weak transition-all ease-in ">
-                  Bruh nekaj je krivo
-                </p>
-              ) : (
-                <p className="w-[480px] flex justify-center border-light-danger title2 border-2 rounded-2xl mb-4 mt-4 p-3 bg-light-danger-weak transition-all ease-in opacity-0">
-                  .
-                </p>
-              )}
               <div className="flex flex-col m-2 relative">
                 <label
                   htmlFor="email"
@@ -99,17 +90,7 @@ function Login() {
                 <button type="submit">Log in with email</button>
               </Button>
             </form>
-            <Link passHref href="/createaccount">
-              <a href="">
-                <Button
-                  outline={true}
-                  style={{ padding: "16px", width: "480px" }}
-                  className="mb-4"
-                >
-                  Create Account
-                </Button>
-              </a>
-            </Link>
+
             <Button
               outline={true}
               style={{ padding: "16px", width: "480px" }}
