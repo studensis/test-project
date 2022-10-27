@@ -57,3 +57,15 @@
 
 }
 
+<<<<<<< HEAD
+=======
+.inputanimation:focus ~ .labelanimation {
+    top: -0.6rem;
+    font-size: 0.8rem;
+    left: 0.7rem;
+    background: #FFF;
+}
+
+
+
+>>>>>>> 541008f9c5cf5b3057a81fafd4b74049bccc08c9

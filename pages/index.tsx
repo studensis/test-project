@@ -5,7 +5,11 @@ import { useState } from "react";
 import Article from "../components/Article";
 import { Button } from "../components/Button";
 import Icon from "../components/Icon";
+<<<<<<< HEAD
 import Ivanbrcic from "../components/ivanbrcic";
+=======
+import Ivanbrcic from "../components/Ivanbrcic";
+>>>>>>> 541008f9c5cf5b3057a81fafd4b74049bccc08c9
 import Status from "../components/Status";
 import Subject from "../components/Subject";
 import Table from "../components/Table";
