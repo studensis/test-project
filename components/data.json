@@ -1,0 +1,26 @@
+[
+{
+    "id": 1,
+    "spol": "M",
+    "ime": "Adrian",
+    "status": "peder"
+},
+{
+    "id": 2,
+    "spol": "Ž",
+    "ime": "Sonja",
+    "status": "legenda"
+},
+{
+    "id": 3,
+    "spol": "M",
+    "ime": "Uefčk",
+    "status": "peder"
+},
+{
+    "id": 4,
+    "spol": "Ž",
+    "ime": "Ivan",
+    "status": "jagushted"
+}
+]
